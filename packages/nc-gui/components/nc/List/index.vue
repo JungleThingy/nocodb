@@ -344,7 +344,7 @@ watch(
     @keydown.enter.prevent="handleSelectOption(list[activeOptionIndex])"
   >
     <template v-if="isSearchEnabled">
-      <div class="w-full px-2 flex items-center gap-2" @click.stop>
+      <div class="w-full px-2 flex nc-list-search-wrapper items-center gap-2" @click.stop>
         <slot name="headerExtraLeft"> </slot>
         <a-input
           ref="inputRef"
@@ -376,7 +376,7 @@ watch(
               <NcTooltip
                 v-for="{ data: option, index: idx } in virtualList"
                 :key="idx"
-                class="flex items-center gap-2 w-full py-2 px-2 rounded-md my-[2px] first-of-type:mt-0 last-of-type:mb-0"
+                class="flex items-center gap-2 nc-list-item w-full py-2 px-2 rounded-md my-[2px] first-of-type:mt-0 last-of-type:mb-0"
                 :class="[
                   `nc-list-option-${idx}`,
                   {
